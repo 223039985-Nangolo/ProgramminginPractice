@@ -5,15 +5,23 @@ int main() {
     double balance;
     printf("MUNICIPAL BUDGET CALCULATOR\n");
     printf("-------------------\n\n");
-    printf("Enter total revenue:");
+    printf("Enter Total Revenue:");
     scanf("%If", &revenue);
-    printf("Enter total expenses: ");
+    printf("Enter Total Expenses: ");
     scanf("%If", &expenses);
     balance = revenue - expenses;
-    printf("\n---------------\n");
-    printf("Revenue : %.2f\n", revenue);
-    printf("Expenses : %.2f\n", expenses);
-    printf("Balance : %.2f\n", balance);
+    printf("\n======BUDGET REPORT===========\n");
+    printf("Total Revenue : %.2f\n", revenue);
+    printf("Total Expenses : %.2f\n", expenses);
+    if (balance > 0){
+        printf("SURPLUS    : N$ %.2f\n",  balance);
+    }
+    else if (balance < 0){
+        printf("DEFICIT    :N$ %.2f\n", -balance);
+    }
+    else{
+        printf("BALANCED BUDGET: N$ 0.00\n");
+    }
     printf("\n---------------\n");
     return 0;
 }
